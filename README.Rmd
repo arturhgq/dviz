@@ -1,0 +1,32 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# dviz
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![CRAN status](https://www.r-pkg.org/badges/version/dviz)](https://CRAN.R-project.org/package=dviz)
+<!-- badges: end -->
+
+The goal of dviz is to provide useful tools for making fancy plots
+
+## Installation
+
+You can install the development version of dviz like so:
+
+``` r
+remotes::install_github("arturhgq/dviz")
+```
+
