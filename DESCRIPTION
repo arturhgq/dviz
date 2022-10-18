@@ -1,16 +1,21 @@
-Package: dviz
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Package: ggviz
+Title: Tools and themes for making fancy pĺots.
+Version: 0.0.1
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Artur", "Quirino", , "contact@arturhgq.com", role = c("aut", "cre"),
+           comment = c(ORCID = "000-0001-8071-6348"))
+Description: This package provides tools and themes for making fancy pĺots.
 License: MIT + file LICENSE
 Suggests: 
+    covr,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
-URL: https://github.com/arturhgq/dviz
-BugReports: https://github.com/arturhgq/dviz/issues
+URL: https://github.com/arturhgq/ggviz,
+    https://arturhgq.github.io/ggviz/,
+    https://arturhgq.github.io/dviz/
+BugReports: https://github.com/arturhgq/ggviz/issues
+Imports: 
+    lifecycle

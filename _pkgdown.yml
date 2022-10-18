@@ -1,0 +1,26 @@
+url: https://arturhgq.github.io/dviz/
+authors:
+  Artur Quirino:
+    href: https://arturhgq.com
+template:
+  bootstrap: 5
+  bslib:
+    primary: '#666699'
+    bg: '#f8f9f9'
+    fg: '#283747'
+    code-bg: '#d6dcdc'
+    border-radius: 0.5rem
+    btn-border-radius: 0.25rem
+    code_font:
+      google: Fira Code
+
+reference:
+- title: Themes
+  desc: ggplot2 themes
+  contents:
+  - theme_facet
+
+- title: Text
+  desc:
+  contents:
+  - geom_text_fontsize
