@@ -17,4 +17,8 @@ URL: https://github.com/arturhgq/ggviz,
      http://ggviz.arturhgq.com/
 BugReports: https://github.com/arturhgq/ggviz/issues
 Imports: 
-    lifecycle
+    dplyr,
+    ggplot2,
+    lifecycle,
+    scales,
+    tidyr

@@ -64,6 +64,7 @@ theme_facet = function(
       color = "grey92"
     ),
     legend.position = "top",
-    legend.background = ggplot2::element_blank()
+    legend.background = ggplot2::element_blank(),
+    legend.key = ggplot2::element_blank()
   )
 }
