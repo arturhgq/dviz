@@ -12,8 +12,7 @@ This package provides tools and themes for making fancy pĺots.
 Useful links:
 \itemize{
   \item \url{https://github.com/arturhgq/ggviz}
-  \item \url{https://arturhgq.github.io/ggviz/}
-  \item \url{https://arturhgq.github.io/dviz/}
+  \item \url{http://ggviz.arturhgq.com/}
   \item Report bugs at \url{https://github.com/arturhgq/ggviz/issues}
 }
 

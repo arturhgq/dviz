@@ -2,12 +2,16 @@
 % Please edit documentation in R/fontsize.R
 \name{geom_text_fontsize}
 \alias{geom_text_fontsize}
-\title{Adequa a escala de pontos do ggplot2 à escala de texto}
+\title{Match ggplot2 pt scale to text scale}
 \usage{
-geom_text_fontsize(.size = 12)
+geom_text_fontsize(size = 12)
+}
+\arguments{
+\item{size}{text scale size}
 }
 \description{
-Adequa a escala de pontos do ggplot2 à escala de texto
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#stable}{\figure{lifecycle-stable.svg}{options: alt='[Stable]'}}}{\strong{[Stable]}}
+This function matchs ggplot2 pt scale to text scale
 }
 \references{
 https://stackoverflow.com/questions/52304141/adjust-font-size-to-size-of-plot-device
