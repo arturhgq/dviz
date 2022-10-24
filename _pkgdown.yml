@@ -19,6 +19,8 @@ reference:
   desc: ggplot2 themes
   contents:
   - theme_facet
+  - theme_academic
+  - theme_basic
 
 - title: Text
   desc:
