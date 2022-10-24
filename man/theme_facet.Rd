@@ -10,8 +10,12 @@ theme_facet(
   size = 12,
   size_title = 12,
   size_subtitle = 10,
-  size_caption = 10
+  size_caption = 10,
+  size_strip = 10
 )
+}
+\arguments{
+\item{design}{"minimal" or "xlt"}
 }
 \description{
 ggplot2 minimal facet theme

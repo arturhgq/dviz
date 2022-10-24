@@ -19,6 +19,9 @@ BugReports: https://github.com/arturhgq/ggviz/issues
 Imports: 
     dplyr,
     ggplot2,
+    gridtext (>= 0.1.5),
     lifecycle,
     scales,
     tidyr
+Remotes:  
+    wilkelab/gridtext

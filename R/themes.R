@@ -1,4 +1,5 @@
 #' @title ggplot2 minimal facet theme
+#' @param design "minimal" or "xlt"
 #' @examples
 #' dplyr::starwars |>
 #'   tidyr::drop_na(eye_color, height, mass) |>
@@ -31,40 +32,65 @@ theme_facet = function(
     size = 12,
     size_title = 12,
     size_subtitle = 10,
-    size_caption = 10
+    size_caption = 10,
+    size_strip = 10
 ) {
-  ggplot2::theme(
-    text = ggplot2::element_text(
-      size = size,
-      color = "grey30",
-      lineheight = 1,
-      family = family
-    ),
-    plot.title.position = "plot",
-    plot.caption.position = "plot",
-    plot.title = ggplot2::element_text(
-      size = size_title,
-      color = "black",
-      face = "bold",
-      margin = ggplot2::margin(0,0,2,0)
-    ),
-    plot.subtitle = ggplot2::element_text(
-      size = size_subtitle,
-      color = "grey30"
-    ),
-    plot.caption = ggplot2::element_text(
-      size = size_caption,
-      color = "black"
-    ),
-    panel.background = ggplot2::element_blank(),
-    axis.ticks = ggplot2::element_blank(),
-    axis.text.y = ggplot2::element_text(vjus = 0),
-    panel.grid = ggplot2::element_blank(),
-    panel.grid.major.y = ggplot2::element_line(
-      color = "grey92"
-    ),
-    legend.position = "top",
-    legend.background = ggplot2::element_blank(),
-    legend.key = ggplot2::element_blank()
-  )
+theme_facet = ggplot2::theme(
+  text = ggplot2::element_text(
+    size = size,
+    color = color("textgray"),
+    lineheight = 1,
+    family = family
+  ),
+  plot.title.position = "plot",
+  plot.caption.position = "plot",
+  plot.title = ggtext::element_textbox_simple(
+    size = size_title,
+    face = "bold",
+    color = color("black"),
+    margin = ggplot2::margin(0,0,2,0)
+  ),
+  plot.subtitle = ggtext::element_textbox_simple(
+    size = size_subtitle,
+    color = color("textgray"),
+    margin = ggplot2::margin(0,0,2,0)
+  ),
+  plot.caption = ggtext::element_textbox_simple(
+    size = size_caption,
+    color = color("black"),
+    halign = 1,
+    margin = ggplot2::margin(2,0,0,0)
+  ),
+  strip.text = ggtext::element_textbox_simple(
+    size = size_strip,
+    margin = ggplot2::margin(2,0,2,0),
+    padding = ggplot2::margin(4, 4, 2, 4),
+    halign = .5
+  ),
+  panel.background = ggplot2::element_blank(),
+  axis.text.y = ggplot2::element_text(vjust = 0),
+  panel.grid = ggplot2::element_blank(),
+  panel.grid.major.y = ggplot2::element_line(
+    color = color("linegray")
+  ),
+  legend.position = "top",
+  legend.background = ggplot2::element_blank(),
+  legend.key = ggplot2::element_blank()
+)
+
+  if (design == "minimal") {
+    theme_facet +
+      ggplot2::theme(
+        axis.ticks = ggplot2::element_blank()
+      )
+  } else if(design == "xlt") {
+    theme_facet +
+      ggplot2::theme(
+        axis.ticks.y = ggplot2::element_blank(),
+        axis.ticks.length.x = ggplot2::unit(.1, "cm"),
+        axis.ticks.x = ggplot2::element_line(size = .2, color = color("text")),
+        axis.line.y = ggplot2::element_blank(),
+        axis.line.x = ggplot2::element_line(size = .2, color = color("text")),
+      )
+  }
 }

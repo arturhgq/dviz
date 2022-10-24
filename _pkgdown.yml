@@ -24,3 +24,8 @@ reference:
   desc:
   contents:
   - geom_text_fontsize
+
+- title: Color
+  desc:
+  contents:
+  - color
