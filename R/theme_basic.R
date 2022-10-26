@@ -9,19 +9,28 @@ theme_basic = function(
     size_strip = 10,
     size_axis = 10,
     size_axis_title = 12,
-    strip_margin_t = 2,
-    strip_margin_r = 0,
-    strip_margin_b = 2,
-    strip_margin_l = 0,
-    plot_margin_t = 5,
-    plot_margin_r = 5,
-    plot_margin_b = 5,
-    plot_margin_l = 5,
+    size_grid_major_line = .5,
+    size_legend = 10,
+    margin_strip_t = 2,
+    margin_strip_r = 0,
+    margin_strip_b = 2,
+    margin_strip_l = 0,
+    margin_plot_t = 5,
+    margin_plot_r = 5,
+    margin_plot_b = 5,
+    margin_plot_l = 5,
+    margin_legend_t = 0,
+    margin_legend_r = 0,
+    margin_legend_b = 0,
+    margin_legend_l = 0,
+    margin_axis_titlex_b = 5,
     color_text = "gray30",
     color_axis_title = "gray30",
     hjust_axis_title_x= .5,
     vjust_axis_title_y = .5,
-    angle_axis_title_y = 90
+    angle_axis_title_y = 90,
+    pos_legend = "top",
+    panel_spacing = .4
 #    axis_title_x = TRUE,
 #    axis_title_y = TRUE
 ) {
@@ -33,10 +42,10 @@ theme_basic = function(
       family = family
     ),
     plot.margin = ggplot2::margin(
-      t = plot_margin_t,
-      r = plot_margin_r,
-      b = plot_margin_b,
-      l = plot_margin_l
+      t = margin_plot_t,
+      r = margin_plot_r,
+      b = margin_plot_b,
+      l = margin_plot_l
     ),
     plot.title.position = "plot",
     plot.caption.position = "plot",
@@ -61,15 +70,16 @@ theme_basic = function(
     strip.text = ggtext::element_textbox_simple(
       size = size_strip,
       margin = ggplot2::margin(
-        t = strip_margin_t,
-        r = strip_margin_r,
-        b = strip_margin_b,
-        l = strip_margin_l
+        t = margin_strip_t,
+        r = margin_strip_r,
+        b = margin_strip_b,
+        l = margin_strip_l
       ),
       padding = ggplot2::margin(4, 4, 2, 4),
       halign = .5
     ),
     panel.background = ggplot2::element_blank(),
+    panel.spacing = ggplot2::unit(panel_spacing, "lines"),
     axis.ticks = ggplot2::element_blank(),
     axis.title.y = ggtext::element_markdown(
       angle = angle_axis_title_y,
@@ -79,7 +89,7 @@ theme_basic = function(
       margin = ggplot2::margin(r = 5)
     ),
     axis.title.x = ggtext::element_markdown(
-      margin = ggplot2::margin(t = 5, b = 5),
+      margin = ggplot2::margin(t = 5, b = margin_axis_titlex_b),
       color = color_axis_title,
       size = size_axis_title,
       hjust = hjust_axis_title_x
@@ -95,10 +105,24 @@ theme_basic = function(
     ),
     panel.grid = ggplot2::element_blank(),
     panel.grid.major.y = ggplot2::element_line(
-      color = color("linegray")
+      color = color("linegray"),
+      size = size_grid_major_line
     ),
-    legend.position = "top",
+    legend.position = pos_legend,
     legend.background = ggplot2::element_blank(),
-    legend.key = ggplot2::element_blank()
+    legend.key = ggplot2::element_blank(),
+    legend.key.size = ggplot2::unit(1, 'lines'),
+    legend.text = ggplot2::element_text(
+      size = size_legend,
+      family = family,
+      color = color("text")
+    ),
+    legend.title = ggplot2::element_blank(),
+    legend.margin = ggplot2::margin(
+      t = margin_legend_t,
+      r = margin_legend_r,
+      b = margin_legend_b,
+      l = margin_legend_l
+    )
   )
 }

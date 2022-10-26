@@ -18,10 +18,13 @@ URL: https://github.com/arturhgq/ggviz,
 BugReports: https://github.com/arturhgq/ggviz/issues
 Imports: 
     dplyr,
+    dtools (>= 0.0.1),
     ggplot2,
+    ggtext,
     gridtext (>= 0.1.5),
     lifecycle,
     scales,
     tidyr
 Remotes:  
-    wilkelab/gridtext
+    wilkelab/gridtext,
+    arturhgq/dtools

@@ -5,10 +5,16 @@
 \title{ggplot2 academic theme}
 \usage{
 theme_academic(
+  family = "Times New Roman",
   color_text = "black",
   hjust_axis_title_x = 1,
   vjust_axis_title_y = 1,
   color_axis_title = "black",
+  margin_axis_titlex_b = 0,
+  size_grid_major_line = 0.3,
+  margin_legend_t = -20,
+  pos_legend = "bottom",
+  panel_spacing = 1,
   ...
 )
 }
