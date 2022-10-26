@@ -1,5 +1,5 @@
 #' @title ggplot2 facet theme
-#' @param design "basic" "minimal" or "xlt"
+#' @param design "basic" or ""academic"
 #' @examples
 #' dplyr::starwars |>
 #'   tidyr::drop_na(eye_color, height, mass) |>
@@ -30,17 +30,9 @@ theme_facet = function(
     design = "basic",
     ...
 ) {
-  theme_facet = do.call(theme_basic, list(...))
-
   if (design == "basic") {
-    theme_facet
-  } else if(design == "xlt") {
-    theme_facet +
-      ggplot2::theme(
-        axis.ticks.length.x = ggplot2::unit(.1, "cm"),
-        axis.ticks.x = ggplot2::element_line(size = .2, color = color("text")),
-        axis.line.y = ggplot2::element_blank(),
-        axis.line.x = ggplot2::element_line(size = .2, color = color("text")),
-      )
+    do.call(theme_basic, list(...))
+  } else if(design == "academic") {
+    do.call(theme_academic, list(...))
   }
 }
