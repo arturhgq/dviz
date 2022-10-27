@@ -7,7 +7,7 @@
 theme_facet(design = "basic", ...)
 }
 \arguments{
-\item{design}{"basic" "minimal" or "xlt"}
+\item{design}{"basic" or ""academic"}
 }
 \description{
 ggplot2 facet theme

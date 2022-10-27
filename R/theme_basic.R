@@ -23,7 +23,7 @@ theme_basic = function(
     margin_legend_r = 0,
     margin_legend_b = 0,
     margin_legend_l = 0,
-    margin_axis_titlex_b = 5,
+    margin_axis_title_x_b = 5,
     color_text = "gray30",
     color_axis_title = "gray30",
     color_ticks_x = NA,
@@ -96,17 +96,17 @@ theme_basic = function(
       margin = ggplot2::margin(r = 5)
     ),
     axis.title.x = ggtext::element_markdown(
-      margin = ggplot2::margin(t = 5, b = margin_axis_titlex_b),
+      margin = ggplot2::margin(t = 5, b = margin_axis_title_x_b),
       color = color_axis_title,
       size = size_axis_title,
       hjust = hjust_axis_title_x
     ),
-    axis.text.y = ggplot2::element_text(
+    axis.text.y = ggtext::element_markdown(
       size = size_axis,
       color = color_text,
       vjust = 0
     ),
-    axis.text.x = ggplot2::element_text(
+    axis.text.x = ggtext::element_markdown(
       size = size_axis,
       color = color_text
     ),
