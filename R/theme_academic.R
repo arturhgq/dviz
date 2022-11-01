@@ -1,5 +1,5 @@
-#' @title ggplot2 academic theme
 #' @rdname theme_basic
+#' @param ... theme_basic arguments
 #' @export
 theme_academic = function(
     family = "Times New Roman",
@@ -9,6 +9,11 @@ theme_academic = function(
     color_axis_title = "black",
     margin_axis_title_x_b = 0,
     size_grid_major_line = .3,
+    size_strip = 12,
+    color_strip_background = NA,
+    fill_strip_background = NA,
+    halign_strip_text = 0,
+    face_strip_text = "bold",
     margin_legend_t = -20,
     pos_legend = "bottom",
     panel_spacing = 1,

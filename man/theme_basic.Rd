@@ -3,7 +3,7 @@
 \name{theme_academic}
 \alias{theme_academic}
 \alias{theme_basic}
-\title{ggplot2 academic theme}
+\title{ggplot2 themes}
 \usage{
 theme_academic(
   family = "Times New Roman",
@@ -13,6 +13,11 @@ theme_academic(
   color_axis_title = "black",
   margin_axis_title_x_b = 0,
   size_grid_major_line = 0.3,
+  size_strip = 12,
+  color_strip_background = NA,
+  fill_strip_background = NA,
+  halign_strip_text = 0,
+  face_strip_text = "bold",
   margin_legend_t = -20,
   pos_legend = "bottom",
   panel_spacing = 1,
@@ -50,6 +55,10 @@ theme_basic(
   color_axis_title = "gray30",
   color_ticks_x = NA,
   color_line_x = NA,
+  color_strip_background = "grey86",
+  fill_strip_background = "grey86",
+  halign_strip_text = 0.5,
+  face_strip_text = "plain",
   length_ticks = 0,
   hjust_axis_title_x = 0.5,
   vjust_axis_title_y = 0.5,
@@ -58,8 +67,9 @@ theme_basic(
   panel_spacing = 0.4
 )
 }
+\arguments{
+\item{...}{theme_basic arguments}
+}
 \description{
-ggplot2 academic theme
-
-ggplot2 theme basic
+ggplot2 themes
 }

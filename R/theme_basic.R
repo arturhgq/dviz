@@ -1,4 +1,4 @@
-#' @title ggplot2 theme basic
+#' @title ggplot2 themes
 #' @export
 theme_basic = function(
     family = "",
@@ -28,6 +28,10 @@ theme_basic = function(
     color_axis_title = "gray30",
     color_ticks_x = NA,
     color_line_x = NA,
+    color_strip_background = "grey86",
+    fill_strip_background = "grey86",
+    halign_strip_text = .5,
+    face_strip_text = "plain",
     length_ticks = 0,
     hjust_axis_title_x= .5,
     vjust_axis_title_y = .5,
@@ -70,6 +74,10 @@ theme_basic = function(
       lineheight = 1,
       margin = ggplot2::margin(2,0,0,0)
     ),
+    strip.background = ggplot2::element_rect(
+      color = color_strip_background,
+      fill = fill_strip_background
+    ),
     strip.text = ggtext::element_textbox_simple(
       size = size_strip,
       margin = ggplot2::margin(
@@ -79,7 +87,8 @@ theme_basic = function(
         l = margin_strip_l
       ),
       padding = ggplot2::margin(4, 4, 2, 4),
-      halign = .5
+      halign = halign_strip_text,
+      face = face_strip_text
     ),
     panel.background = ggplot2::element_blank(),
     panel.spacing = ggplot2::unit(panel_spacing, "lines"),
