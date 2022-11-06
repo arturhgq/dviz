@@ -15,19 +15,24 @@ template:
       google: Fira Code
 
 reference:
-- title: Themes
+- title: themes
   desc: ggplot2 themes
   contents:
   - theme_facet
   - theme_academic
   - theme_basic
 
-- title: Text
+- title: text
   desc:
   contents:
   - geom_text_fontsize
 
-- title: Color
+- title: color
   desc:
   contents:
   - color
+
+- title: geom
+  desc:
+  contents:
+  - plot_col_wrap
