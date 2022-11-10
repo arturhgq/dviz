@@ -10,7 +10,7 @@
 #'   mapping = ggplot2::aes(x = name, y = days),
 #'   width = .8,
 #'   group = c(party),
-#'   size = .1,
+#'   linewidth = .1,
 #'   fill = "gray"
 #' )
 #' @export

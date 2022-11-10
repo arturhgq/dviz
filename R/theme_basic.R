@@ -36,7 +36,7 @@ theme_basic = function(
     hjust_axis_title_x= .5,
     vjust_axis_title_y = .5,
     angle_axis_title_y = 90,
-    pos_legend = "top",
+    pos_legend = "bottom",
     panel_spacing = .4
 #    axis_title_x = TRUE,
 #    axis_title_y = TRUE
@@ -91,6 +91,7 @@ theme_basic = function(
         halign = halign_strip_text,
         face = face_strip_text
       ),
+      strip.clip = "off",
       panel.background = ggplot2::element_blank(),
       panel.spacing = ggplot2::unit(panel_spacing, "lines"),
       axis.ticks.y = ggplot2::element_blank(),

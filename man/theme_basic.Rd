@@ -18,8 +18,8 @@ theme_academic(
   fill_strip_background = NA,
   halign_strip_text = 0,
   face_strip_text = "bold",
-  margin_legend_t = -20,
-  pos_legend = "bottom",
+  margin_legend_t = 25,
+  pos_legend = "top",
   panel_spacing = 1,
   color_ticks_x = "black",
   color_line_x = "black",
@@ -63,7 +63,7 @@ theme_basic(
   hjust_axis_title_x = 0.5,
   vjust_axis_title_y = 0.5,
   angle_axis_title_y = 90,
-  pos_legend = "top",
+  pos_legend = "bottom",
   panel_spacing = 0.4
 )
 }
