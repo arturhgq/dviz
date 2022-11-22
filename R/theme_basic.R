@@ -7,27 +7,38 @@ theme_basic = function(
     size_subtitle = 10,
     size_caption = 10,
     size_strip = 10,
-    size_axis = 10,
+    size_axis_text = 10,
     size_axis_title = 12,
-    size_grid_major_line = .5,
+    size_grid_major_line_y = .5,
+    size_grid_major_line_x = NA,
+    size_grid_minor_line_y = NA,
+    size_grid_minor_line_x = NA,
     size_legend = 10,
+    size_ticks = .2,
+    size_line = .2,
     margin_strip_t = 2,
     margin_strip_r = 0,
     margin_strip_b = 2,
     margin_strip_l = 0,
+    padding_strip_t = 0,
+    padding_strip_r = 0,
+    padding_strip_b = 0,
+    padding_strip_l = 0,
     margin_plot_t = 5,
     margin_plot_r = 5,
     margin_plot_b = 5,
     margin_plot_l = 5,
-    margin_legend_t = 0,
-    margin_legend_r = 0,
-    margin_legend_b = 0,
-    margin_legend_l = 0,
+    margin_legend_t = 4,
+    margin_legend_r = 4,
+    margin_legend_b = 2,
+    margin_legend_l = 4,
     margin_axis_title_x_b = 5,
     color_text = "gray30",
     color_axis_title = "gray30",
     color_ticks_x = NA,
     color_line_x = NA,
+    color_grid = color("linegray"),
+    color_plot_background = "white",
     color_strip_background = "grey86",
     fill_strip_background = "grey86",
     halign_strip_text = .5,
@@ -37,7 +48,8 @@ theme_basic = function(
     vjust_axis_title_y = .5,
     angle_axis_title_y = 90,
     pos_legend = "bottom",
-    panel_spacing = .4
+    panel_spacing = .4,
+    linetype_grid = "solid"
 #    axis_title_x = TRUE,
 #    axis_title_y = TRUE
 ) {
@@ -75,6 +87,11 @@ theme_basic = function(
         lineheight = 1,
         margin = ggplot2::margin(2,0,0,0)
       ),
+      plot.background = ggplot2::element_rect(
+        color = color_plot_background,
+        fill = "white",
+        size = 0.5
+      ),
       strip.background = ggplot2::element_rect(
         color = color_strip_background,
         fill = fill_strip_background
@@ -87,7 +104,12 @@ theme_basic = function(
           b = margin_strip_b,
           l = margin_strip_l
         ),
-        padding = ggplot2::margin(4, 4, 2, 4),
+        padding = ggplot2::margin(
+          t = padding_strip_t,
+          r = padding_strip_r,
+          b = padding_strip_b,
+          l = padding_strip_l
+        ),
         halign = halign_strip_text,
         face = face_strip_text
       ),
@@ -96,9 +118,9 @@ theme_basic = function(
       panel.spacing = ggplot2::unit(panel_spacing, "lines"),
       axis.ticks.y = ggplot2::element_blank(),
       axis.ticks.length.x = ggplot2::unit(length_ticks, "cm"),
-      axis.ticks.x = ggplot2::element_line(size = .2, color = color_ticks_x),
+      axis.ticks.x = ggplot2::element_line(size = size_ticks, color = color_ticks_x),
       axis.line.y = ggplot2::element_blank(),
-      axis.line.x = ggplot2::element_line(size = .2, color = color_line_x),
+      axis.line.x = ggplot2::element_line(size = size_line, color = color_line_x),
       axis.title.y = ggtext::element_markdown(
         angle = angle_axis_title_y,
         hjust = vjust_axis_title_y,
@@ -113,19 +135,32 @@ theme_basic = function(
         hjust = hjust_axis_title_x
       ),
       axis.text.y = ggtext::element_markdown(
-        size = size_axis,
+        size = size_axis_text,
         color = color_text,
         vjust = 0
       ),
       axis.text.x = ggtext::element_markdown(
-        size = size_axis,
+        size = size_axis_text,
         color = color_text
       ),
       panel.grid = ggplot2::element_blank(),
       panel.grid.major.y = ggplot2::element_line(
-        color = color("linegray"),
-        size = size_grid_major_line
+        color = color_grid,
+        size = size_grid_major_line_y
       ),
+      panel.grid.major.x = ggplot2::element_line(
+        color = color_grid,
+        size = size_grid_major_line_x,
+        linetype = linetype_grid),
+      panel.grid.minor.x = ggplot2::element_line(
+        color = color_grid,
+        size = size_grid_minor_line_x,
+        linetype = linetype_grid),
+      panel.grid.minor.y = ggplot2::element_line(
+        color = color_grid,
+        size = size_grid_minor_line_y,
+        linetype = linetype_grid),
+
       legend.position = pos_legend,
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_blank(),

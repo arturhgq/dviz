@@ -21,6 +21,7 @@ reference:
   - theme_facet
   - theme_academic
   - theme_basic
+  - theme_boxplot
 
 - title: text
   desc:
