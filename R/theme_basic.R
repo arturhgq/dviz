@@ -49,7 +49,8 @@ theme_basic = function(
     angle_axis_title_y = 90,
     pos_legend = "bottom",
     panel_spacing = .4,
-    linetype_grid = "solid"
+    linetype_grid = "solid",
+    ...
 #    axis_title_x = TRUE,
 #    axis_title_y = TRUE
 ) {
@@ -90,7 +91,7 @@ theme_basic = function(
       plot.background = ggplot2::element_rect(
         color = color_plot_background,
         fill = "white",
-        size = 0.5
+        linewidth = 0.5
       ),
       strip.background = ggplot2::element_rect(
         color = color_strip_background,
@@ -118,9 +119,9 @@ theme_basic = function(
       panel.spacing = ggplot2::unit(panel_spacing, "lines"),
       axis.ticks.y = ggplot2::element_blank(),
       axis.ticks.length.x = ggplot2::unit(length_ticks, "cm"),
-      axis.ticks.x = ggplot2::element_line(size = size_ticks, color = color_ticks_x),
+      axis.ticks.x = ggplot2::element_line(linewidth = size_ticks, color = color_ticks_x),
       axis.line.y = ggplot2::element_blank(),
-      axis.line.x = ggplot2::element_line(size = size_line, color = color_line_x),
+      axis.line.x = ggplot2::element_line(linewidth = size_line, color = color_line_x),
       axis.title.y = ggtext::element_markdown(
         angle = angle_axis_title_y,
         hjust = vjust_axis_title_y,
@@ -146,19 +147,19 @@ theme_basic = function(
       panel.grid = ggplot2::element_blank(),
       panel.grid.major.y = ggplot2::element_line(
         color = color_grid,
-        size = size_grid_major_line_y
+        linewidth = size_grid_major_line_y
       ),
       panel.grid.major.x = ggplot2::element_line(
         color = color_grid,
-        size = size_grid_major_line_x,
+        linewidth = size_grid_major_line_x,
         linetype = linetype_grid),
       panel.grid.minor.x = ggplot2::element_line(
         color = color_grid,
-        size = size_grid_minor_line_x,
+        linewidth = size_grid_minor_line_x,
         linetype = linetype_grid),
       panel.grid.minor.y = ggplot2::element_line(
         color = color_grid,
-        size = size_grid_minor_line_y,
+        linewidth = size_grid_minor_line_y,
         linetype = linetype_grid),
 
       legend.position = pos_legend,
@@ -176,6 +177,7 @@ theme_basic = function(
         r = margin_legend_r,
         b = margin_legend_b,
         l = margin_legend_l
-      )
+      ),
+      ...
     )
 }

@@ -14,8 +14,8 @@ theme_academic(
   vjust_axis_title_y = 1,
   color_axis_title = "black",
   margin_axis_title_x_b = 0,
-  size_grid_major_line = 0.3,
   size_strip = 12,
+  color_plot_background = "black",
   color_strip_background = NA,
   fill_strip_background = NA,
   halign_strip_text = 0,
@@ -78,7 +78,8 @@ theme_basic(
   angle_axis_title_y = 90,
   pos_legend = "bottom",
   panel_spacing = 0.4,
-  linetype_grid = "solid"
+  linetype_grid = "solid",
+  ...
 )
 
 theme_boxplot(
