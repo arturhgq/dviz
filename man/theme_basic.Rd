@@ -47,7 +47,7 @@ theme_basic(
   size_line = 0.2,
   margin_strip_t = 2,
   margin_strip_r = 0,
-  margin_strip_b = 2,
+  margin_strip_b = 0.5,
   margin_strip_l = 0,
   padding_strip_t = 0,
   padding_strip_r = 0,
